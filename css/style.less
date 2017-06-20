@@ -1,0 +1,362 @@
+@import 'palette.less';
+@import 'mixins.less';
+
+body {
+	font-family: "Open Sans", sans-serif;
+    font-size: 0.875em;
+    line-height: 1.5em;
+    background-color: @lightColor;
+    color: @darkColor;	
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header {
+	background-size: 100% 100px;
+	height: 100px;
+	h1 {
+		text-align: left;
+		padding-left: 10;
+	}	
+}
+	
+
+nav {
+	max-height:60px;
+	transition: max-height 0.3s;
+	overflow: hidden;
+	}
+
+.w3-content{max-width:980px;margin:auto}.w3-rest{overflow:hidden}
+.w3-animate-fading{animation:fading 10s infinite}@keyframes fading{0%{opacity:0}50%{opacity:1}100%{opacity:0}}
+.w3-animate-opacity{animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}}
+.w3-animate-top{position:relative;animation:animatetop 0.4s}@keyframes animatetop{from{top:-300px;opacity:0} to{top:0;opacity:1}}
+.w3-animate-left{position:relative;animation:animateleft 0.4s}@keyframes animateleft{from{left:-300px;opacity:0} to{left:0;opacity:1}}
+.w3-animate-right{position:relative;animation:animateright 0.4s}@keyframes animateright{from{right:-300px;opacity:0} to{right:0;opacity:1}}
+.w3-animate-bottom{position:relative;animation:animatebottom 0.4s}@keyframes animatebottom{from{bottom:-300px;opacity:0} to{bottom:0;opacity:1}}
+.w3-animate-zoom {animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}}
+.w3-animate-input{transition:width 0.4s ease-in-out}.w3-animate-input:focus{width:100%!important}
+
+.menu {
+	background: @color5;
+
+	a {
+		display: block;
+		text-decoration: none;
+		padding: 20px 30px;
+		color: @lightColor;
+		border: 0;
+		&:hover {
+			background-color: @color1;
+			}
+		}
+	li {
+		position: relative;
+		ul {
+			display: block;
+			background: @color1;
+			max-height: 0;
+			overflow: hidden;
+			transition: all 0.3s ease;
+		}
+	}
+	
+}
+
+
+.menu-btn {
+	background: @color5;
+	text-align: center;
+	cursor: s-resize;
+	img {
+		vertical-align: middle;
+		height: 50px;
+		}
+	}
+
+.menu-open,
+.menu .open > ul {
+	max-height: 2000px;
+	}
+
+.menu .open > .more img {
+	transform: rotate(-90deg);
+}
+
+.more {
+	background: rgba(0, 0, 0, 0.38);
+	float: right;
+	min-width: 10%;
+	cursor: move;
+	img {
+		height: 55px;
+		transition: transform 0.3s;
+		}
+	}
+
+a {
+	text-decoration: none;
+}
+
+
+figcaption {
+	display: block;
+	text-align: center;
+	color: @color4;
+	font-size: 1.2em;
+	padding-bottom: 1em;
+	padding-top: 0.05em;
+}
+
+aside {
+	float: left;
+	width: 100%;
+	background-color: @lightColor;
+}
+
+article {
+	&.content {
+		float: left;
+		width: 100%;
+		font-size: 1.05em;
+		min-height: 500px;
+		
+		img {
+			float: left;
+			width: 20em;
+		}
+		
+		p, img {
+			padding: 1.25em;
+		}
+	}
+	&.content2 {
+		float: left;
+		width: 100%;
+		font-size: 1.05em;
+		
+		img {
+			float: left;
+			width: 20em;
+		}
+		
+		p, img {
+			padding: 1.25em;
+		}
+	}
+	
+	&.sl {
+				
+		img {
+			width: 100%;			
+			height: 120px;
+			
+		}
+	}
+	&.left {
+		width: 100%;
+        float: left;
+
+	}
+	&.dimsum {
+		img {
+			max-width: 100%;
+		}
+	}
+	
+
+}
+    
+.share-buttons {
+	display: block;
+	margin: 0 auto;
+	width: 180px;
+	clear: both;
+	img {
+		width: 30px;
+		height: 30px;
+		margin: 5px;
+	}
+}
+
+footer {
+    text-align: center;
+    padding: 0.625em;
+    background-color: @color5;
+	color: @lightColor;
+	clear: left;
+	
+	
+}  
+
+h1 {
+	.headerFontAttributes(@color5; 1.8em);
+}
+
+h2 {
+	.headerFontAttributes(@color1; 1.4em);
+   }
+
+h3 {
+	.headerFontAttributes(@color2; 1.4em);
+}
+
+
+label {
+	float: left;
+	display: block;
+	width: 10em;
+	margin-left: 0.7em
+}
+
+input, textarea, select {
+	display: block;
+	margin: 0.8em;
+	width: 300px;
+}
+
+input, select {
+	height: 24px;
+}
+
+input[type='image'] {
+	width: 100px;
+	height: 50px;
+}
+
+textarea {
+	height: 5em;
+}
+
+.button {
+    background-color: @color4;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+	box-shadow: 2px 2px @color3;
+}
+
+.buttonc {
+    background-color: @color4;
+    border: none;
+    color: white;
+    padding-bottom: 1.5em;
+	padding-top: 0.5em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+	box-shadow: 2px 2px @color3;
+}
+
+/* Tablet CSS code and up */
+@media only screen and (min-width: 600px) {
+
+	article {
+
+		&.sl {
+		img {
+			height: 240px;			
+			}
+		}
+		&.left {
+			width: 60%;
+		}
+	}
+	aside {
+	width: 40%;
+
+}
+	
+}
+
+/* Desktop STYLESHEET */
+@media only screen and (min-width: 966px) {
+	article {
+		
+		&.content {
+			min-height: 550px;
+			
+			img {
+				float: right;
+			}
+		}
+		
+		&.sl {
+		img {
+			height: 360px;			
+			}
+		}
+		&.left {
+			width: 55%;
+		}
+		
+    }
+
+    nav {
+	max-height: 100%;
+	overflow: visible;
+	}
+	
+	.menu-btn {
+	display: none;
+	}
+	
+	.menu {
+	text-align: center;
+	a {
+		width:9em;
+		background: @color5;
+		&:hover {
+			background-color: @color1;
+			}
+		}
+	}
+	
+	.menu > li {
+	display: inline-block;
+	margin: 0 2px;
+	}
+	
+	.menu li ul {
+	left: -9999px;
+	position:absolute;
+	overflow: visible;
+	-webkit-transition: all 0.1s ease;
+	}
+	
+    .menu > li > ul ul {
+	top: 0;
+	}
+	
+    .menu li:hover > ul {
+	left:100%;
+	}
+	
+    .menu > li:hover > ul {
+	left: 0;
+	}
+	
+    .menu .open > ul {
+	left:100%; 
+	}
+	
+    .menu > li.open > ul {
+	left: 0;
+	}
+   aside {
+	width: 45%;
+
+}
+
+}
